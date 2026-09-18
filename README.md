@@ -1,10 +1,10 @@
-﻿# 🌡️ Smart Cooling System (NXP LPC1768)
+﻿#  Smart Cooling System (NXP LPC1768)
 
 An intelligent, closed-loop thermal management firmware developed for the **NXP LPC1768 (ARM Cortex-M3)** in bare-metal Embedded C. The system performs real-time temperature acquisition via a **12-bit SAR ADC**, executes a **hysteresis-stabilized control algorithm**, adjusts cooling fan speed using **hardware PWM**, and outputs live telemetry to an **HD44780 16×2 character LCD**.
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 * **High-Accuracy Sensing**: Samples analog temperature from an LM35 sensor via 12-bit ADC (`AD0.1`, `P0.24`) with an 8-point moving average filter to suppress high-frequency noise.
 * **Hysteresis-Based Control**: Implements a 3-tier finite state machine with a $\pm 0.5^\circ\text{C}$ deadband, eliminating thermal chattering, acoustic whining, and mechanical fan fatigue.
@@ -13,7 +13,7 @@ An intelligent, closed-loop thermal management firmware developed for the **NXP 
 
 ---
 
-## 📊 System Architecture & Control Logic
+##  System Architecture & Control Logic
 
 ```
  +----------------+      Analog      +-------------------------+
@@ -54,7 +54,7 @@ An intelligent, closed-loop thermal management firmware developed for the **NXP 
 
 ---
 
-## 📐 Mathematical Derivations
+##  Mathematical Derivations
 
 ### 1. ADC Voltage & Temperature Conversion
 * **ADC Resolution**: 12-bit SAR ADC $\rightarrow 2^{12} - 1 = 4095$ quantization levels.
@@ -75,7 +75,7 @@ $$\text{Duty Cycle (\%)} = \frac{MR5}{MR0} \times 100\%$$
 
 ---
 
-## 🔌 Pin Mapping
+##  Pin Mapping
 
 | Peripheral | LPC1768 Pin | Function / Register | Description |
 | :--- | :--- | :--- | :--- |
@@ -89,7 +89,7 @@ $$\text{Duty Cycle (\%)} = \frac{MR5}{MR0} \times 100\%$$
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 .
@@ -104,7 +104,7 @@ $$\text{Duty Cycle (\%)} = \frac{MR5}{MR0} \times 100\%$$
 
 ---
 
-## 🛠️ How to Build and Flash
+##  How to Build and Flash
 
 ### Using Keil µVision (MDK-ARM):
 1. Open Keil µVision and create a new project targeting **NXP LPC1768**.
@@ -116,5 +116,5 @@ $$\text{Duty Cycle (\%)} = \frac{MR5}{MR0} \times 100\%$$
 
 ---
 
-## 📄 License
+##  License
 This project is open-source under the [MIT License](LICENSE).
