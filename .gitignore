@@ -1,0 +1,27 @@
+﻿# Keil MDK / uVision build outputs
+*.uvopt
+*.uvgui*
+*.crf
+*.o
+*.d
+*.axf
+*.hex
+*.bin
+*.htm
+*.lnp
+*.sct
+*.dep
+*.build_log.htm
+Listings/
+Objects/
+
+# VS Code & IDEs
+.vscode/
+*.swp
+*.bak
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
